@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import {faChevronCircleUp} from "@fortawesome/free-solid-svg-icons";
+
 
 @Component({
   selector: 'app-home-footer',
@@ -8,7 +9,7 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 export class HomeFooterComponent implements OnInit {
 
-  faCoffee = faCoffee
+  go_to_top = faChevronCircleUp
 
   constructor() { }
 

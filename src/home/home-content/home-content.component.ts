@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, SimpleChanges} from '@angular/core';
+
 
 @Component({
   selector: 'app-home-content',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeContentComponent implements OnInit {
 
-  constructor() { }
+  redirect_links = {
+    our_email: 'mailto:prablordeppey@gmail.com',
+    website_repo: 'https://github.com/prablordeppey',
+    youtube_channel: 'https://www.youtube.com/channel/UCFlgJ0SvO5ZWWMJB657_Qdw',
+  }
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+  }
+
+  redirectTo(destination: string) {
+    const url = (<any>this).redirect_links[destination];
+    window.open(url, '_blank');
   }
 
 }
