@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {HomeService} from "../../../home/home.service";
 
 @Component({
   selector: 'app-card',
@@ -7,11 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  items = [1,2,3,4,5,6,7,8,9]
+  @Input() data!: ItemModel[]
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

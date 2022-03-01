@@ -1,4 +1,5 @@
-import {Component, OnInit, SimpleChanges} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {HomeService} from "../home.service";
 
 
 @Component({
@@ -8,16 +9,20 @@ import {Component, OnInit, SimpleChanges} from '@angular/core';
 })
 export class HomeContentComponent implements OnInit {
 
+  items!: ItemModel[]
+
   redirect_links = {
     our_email: 'mailto:prablordeppey@gmail.com',
     website_repo: 'https://github.com/prablordeppey',
     youtube_channel: 'https://www.youtube.com/channel/UCFlgJ0SvO5ZWWMJB657_Qdw',
   }
 
-  constructor() {
+  constructor(private homeService: HomeService) {
+    this.homeService.fetchItems()
   }
 
   ngOnInit(): void {
+    this.items = this.homeService.getItems
   }
 
   redirectTo(destination: string) {
