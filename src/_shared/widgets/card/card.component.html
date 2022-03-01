@@ -1,11 +1,13 @@
 <div class="card-deck">
   <ng-container *ngFor="let item of data;">
     <div class="card text-center my-3" style="min-width: 18rem;">
-      <img class="card-img-top" src="{{ item['img_url'] }}" alt="Card image cap">
+      <img class="card-img-top h-50" src="{{ item['img_url'] }}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{ item['title'] }}</h5>
         <p class="card-text">{{ item['description'] }}</p>
-        <a href="#" class="btn btn-primary">{{ item['resource_link'] }}</a>
+      </div>
+      <div class="card-footer bg-transparent flex-fill">
+        <a href="{{ item['resource_link'] }}" class="btn btn-primary">Read More</a>
       </div>
     </div>
   </ng-container>

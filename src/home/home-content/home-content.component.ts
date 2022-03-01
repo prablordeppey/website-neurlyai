@@ -10,6 +10,7 @@ import {HomeService} from "../home.service";
 export class HomeContentComponent implements OnInit {
 
   items!: ItemModel[]
+  carouselData!: CarouselModel[];
 
   redirect_links = {
     our_email: 'mailto:prablordeppey@gmail.com',
@@ -18,16 +19,12 @@ export class HomeContentComponent implements OnInit {
   }
 
   constructor(private homeService: HomeService) {
-    this.homeService.fetchItems()
+    this.homeService.fetchItemsData()
+    this.homeService.fetchCarouselData()
   }
 
   ngOnInit(): void {
-    this.items = this.homeService.getItems
+    this.items = this.homeService.getItemsData
+    this.carouselData = this.homeService.getCarouselData
   }
-
-  redirectTo(destination: string) {
-    const url = (<any>this).redirect_links[destination];
-    window.open(url, '_blank');
-  }
-
 }

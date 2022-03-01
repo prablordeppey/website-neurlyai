@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from './card/card.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 
 
 @NgModule({
   declarations: [
-    CardComponent
+    CardComponent,
+    CarouselComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    CardComponent
+    CardComponent,
+    CarouselComponent
   ]
 })
 export class WidgetsModule { }
