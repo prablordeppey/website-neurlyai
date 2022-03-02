@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import {environment} from "../../environments/environment";
 
 @Component({
   selector: 'app-home-header',
@@ -10,11 +11,7 @@ export class HomeHeaderComponent implements OnInit {
 
   title = 'NeurlyAI';
 
-  redirect_links = {
-    our_email: 'mailto:prablordeppey@gmail.com',
-    website_repo: 'https://github.com/prablordeppey',
-    youtube_channel: 'https://www.youtube.com/channel/UCFlgJ0SvO5ZWWMJB657_Qdw',
-  }
+  redirect_links = environment['redirect_links']
 
   faCoffee = faCoffee
 
@@ -22,4 +19,16 @@ export class HomeHeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+
+  @HostListener('window:load', ['$event']) onPageLoad($event: any) {
+    $event.target.querySelectorAll('.banner img')
+      .forEach((image: HTMLImageElement) => {
+        console.log(image.height, image.width)
+        image.width = 1084
+        image.height = 361
+        console.log(image.height, image.width)
+      })
+  }
+
 }

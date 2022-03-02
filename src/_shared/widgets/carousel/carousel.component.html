@@ -6,13 +6,14 @@
   </ol>
   <div class="carousel-inner">
 
+<!--    style="max-height: 24rem;"-->
+
     <ng-container *ngFor="let item of data; index as ind">
       <div class="carousel-item {{ ind===0 ? 'active' : '' }}">
         <button class="btn bg-transparent" (click)="redirectTo(item['resource_link'])">
           <img alt="{{ item['alt'] }}"
-               style="max-height: 24rem;"
                class="d-block w-100"
-               src="{{ item['img_url'] }}">
+               src="/assets/imgs/carousel/{{ item['img_url'] }}.png">
           <div class="carousel-caption d-none d-md-block">
             <h5>{{item['title']}}</h5>
             <p>{{item['description']}}</p>

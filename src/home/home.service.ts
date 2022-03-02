@@ -65,14 +65,14 @@ export class HomeService {
     this.carouselData = [
       {
         title: 'Our Github Repository',
-        img_url: 'https://desk.zoho.com/DocsDisplay?zgId=675659995&mode=inline&blockId=4f8642de267cbc29548e48bade204834f7f32',
+        img_url: 'github_logo',
         alt: 'github repository',
         description: '',
         resource_link: 'https://github.com/prablordeppey',
       },
       {
         title: 'Our Youtube Channel',
-        img_url: 'https://logosmarcas.net/wp-content/uploads/2020/04/YouTube-Logo.png',
+        img_url: 'youtube_logo',
         alt: 'youtube channel',
         description: 'Lectures on topics and concepts',
         resource_link: 'https://www.youtube.com/channel/UCFlgJ0SvO5ZWWMJB657_Qdw'
