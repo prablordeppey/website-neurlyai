@@ -5,5 +5,5 @@ export const environment = {
     website_repo: 'https://github.com/prablordeppey',
     youtube_channel: 'https://www.youtube.com/channel/UCFlgJ0SvO5ZWWMJB657_Qdw',
   },
-  imgs_dir: 'https://raw.githubusercontent.com/prablordeppey/website-neurlyai/master/src/assets/imgs'
+  imgs_dir: 'https://raw.githubusercontent.com/prablordeppey/website-neurlyai/master/src/assets/imgs/'
 };
