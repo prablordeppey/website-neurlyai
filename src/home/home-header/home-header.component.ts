@@ -22,11 +22,11 @@ export class HomeHeaderComponent implements OnInit {
 
 
   @HostListener('window:load', ['$event']) onPageLoad($event: any) {
-    $event.target.querySelectorAll('.banner img')
-      .forEach((image: HTMLImageElement) => {
-        image.width = 1084
-        image.height = 361
-      })
+    // $event.target.querySelectorAll('.banner img')
+    //   .forEach((image: HTMLImageElement) => {
+    //     image.width = 1084
+    //     image.height = 361
+    //   })
   }
 
 }
