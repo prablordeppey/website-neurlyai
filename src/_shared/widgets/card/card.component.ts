@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {HomeService} from "../../../home/home.service";
+import { environment } from 'src/environments/environment';
+
 
 @Component({
   selector: 'app-card',
@@ -9,6 +10,7 @@ import {HomeService} from "../../../home/home.service";
 export class CardComponent implements OnInit {
 
   @Input() data!: ItemModel[]
+  imgs_dir: string = environment['imgs_dir']
 
   constructor() {}
 

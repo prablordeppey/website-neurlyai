@@ -8,7 +8,8 @@ export const environment = {
     our_email: 'mailto:prablordeppey@gmail.com',
     website_repo: 'https://github.com/prablordeppey',
     youtube_channel: 'https://www.youtube.com/channel/UCFlgJ0SvO5ZWWMJB657_Qdw',
-  }
+  },
+  imgs_dir: '/assets/imgs/'
 };
 
 /*

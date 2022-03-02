@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-carousel',
@@ -8,6 +9,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class CarouselComponent implements OnInit {
 
   @Input() data!: CarouselModel[];
+  imgs_dir: string = environment['imgs_dir']
 
   constructor() { }
 
