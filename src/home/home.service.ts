@@ -65,23 +65,23 @@ export class HomeService {
     this.carouselData = [
       {
         title: '',
-        img_url: 'github_logo',
+        img_name: 'github_logo',
         alt: 'github repository',
         description: '',
         resource_link: 'https://github.com/prablordeppey',
       },
       {
         title: '',
-        img_url: 'youtube_logo',
+        img_name: 'youtube_logo',
         alt: 'youtube channel',
         description: '',
         resource_link: 'https://www.youtube.com/channel/UCFlgJ0SvO5ZWWMJB657_Qdw'
       },
       {
-        title: 'Tensors',
-        img_url: 'https://i.ytimg.com/vi/VS7b3CIk1DM/sddefault.jpg',
+        title: '',
+        img_name: '3way_tensor',
         alt: 'tensor',
-        description: 'Simultaneous Tensor Dimensionality Reduction and Clustering Techniques',
+        description: '',
         resource_link: 'https://github.com/tensors',
       },
     ]

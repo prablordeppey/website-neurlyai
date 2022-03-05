@@ -7,7 +7,7 @@ interface ItemModel {
 
 interface CarouselModel {
   title: string,
-  img_url: string,
+  img_name: string,
   alt: string,
   description: string,
   resource_link: string
