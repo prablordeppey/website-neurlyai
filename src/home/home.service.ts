@@ -68,7 +68,7 @@ export class HomeService {
         img_name: '3way_tensor',
         alt: 'tensor',
         description: '',
-        resource_link: 'https://github.com/tensors',
+        resource_link: 'tensors',
       },
       {
         title: '',
