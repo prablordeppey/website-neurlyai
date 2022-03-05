@@ -65,6 +65,13 @@ export class HomeService {
     this.carouselData = [
       {
         title: '',
+        img_name: '3way_tensor',
+        alt: 'tensor',
+        description: '',
+        resource_link: 'https://github.com/tensors',
+      },
+      {
+        title: '',
         img_name: 'github_logo',
         alt: 'github repository',
         description: '',
@@ -76,14 +83,7 @@ export class HomeService {
         alt: 'youtube channel',
         description: '',
         resource_link: 'https://www.youtube.com/channel/UCFlgJ0SvO5ZWWMJB657_Qdw'
-      },
-      {
-        title: '',
-        img_name: '3way_tensor',
-        alt: 'tensor',
-        description: '',
-        resource_link: 'https://github.com/tensors',
-      },
+      }
     ]
   }
 }
