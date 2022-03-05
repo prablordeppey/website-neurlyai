@@ -72,7 +72,7 @@ export class HomeService {
       },
       {
         title: '',
-        img_name: 'youtube_logo',
+        img_name: 'youtube_logo2',
         alt: 'youtube channel',
         description: '',
         resource_link: 'https://www.youtube.com/channel/UCFlgJ0SvO5ZWWMJB657_Qdw'
