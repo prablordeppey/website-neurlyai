@@ -1,0 +1,97 @@
+<div class="d-flex flex-column">
+  <app-header></app-header>
+
+  <div class="h-100 w-100 p-3">
+    <mat-drawer-container class="row" autosize>
+      <mat-drawer #drawer class="px-2" mode="side">
+        <div class="px-2">
+          <mat-chip-list aria-label="sidenav_outline"
+                         aria-orientation="horizontal"
+                         class="mat-chip-list-stacked h-100 overflow-hidden"
+          >
+            <ng-container *ngFor="let item of data.main_content; index as ind">
+              <mat-chip color="primary" class="text-wrap w-100 h-auto" (click)="changeScroll( ind )">
+<!--                <a href="#{{ item['short_name'] }}">-->
+                <mat-chip-avatar>
+                  <img src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Photo of a Shiba Inu"/>
+                </mat-chip-avatar>
+                <h6>{{ capitalize( item["short_name"] ) }}</h6>
+<!--                </a>-->
+              </mat-chip>
+            </ng-container>
+          </mat-chip-list>
+        </div>
+
+      </mat-drawer>
+
+      <div class="sidenav_content pl-2" (scroll)="onContentScrolled($event)">
+
+        <div id="toggleButtonRow">
+
+          <mat-button-toggle-group #group="matButtonToggleGroup">
+            <mat-button-toggle (click)="drawer.toggle()" (change)="toggleOutline(drawer)">
+              <span *ngIf="!showOutline">
+                <fa-icon [icon]="arrowLeft"></fa-icon>
+                <span class="toggleText ml-1">Hide Outline</span>
+              </span>
+              <span *ngIf="showOutline">
+                <fa-icon [icon]="arrowRight"></fa-icon>
+                <span class="toggleText ml-1">Show Outline</span>
+              </span>
+            </mat-button-toggle>
+          </mat-button-toggle-group>
+
+        </div>
+
+        <div class="pb-2">
+          <!-- PREREQUISITES -->
+          <ng-container *ngIf="data.prerequisites !== undefined">
+            <div id="prerequisite" class="ml-4 pl-2 py-2 d-flex align-items-center">
+              <h5 class="pl-3">Prerequisites:</h5>
+              <div class="ml-2">
+                <ng-container *ngFor="let prereq of data.prerequisites; index as ind_obj">
+                  <a mat-raised-button routerLink="{{ prereq.resourceLink }}" target="_blank" class="mr-3">{{ prereq.name }}</a>
+                </ng-container>
+              </div>
+            </div>
+          </ng-container>
+
+          <!-- AIM & OBJECTIVES -->
+          <div id="aim_objective" class="pl-5 py-2 text-justify row">
+            <h5 class="pl-3">Aim and Objectives</h5>
+            <div class="px-5">
+              <div [innerHTML]="getAimObjectives('aim')"></div>
+              <u>Objectives :</u>
+              <ol class="list-group">
+                <ng-container *ngFor="let objective of data.aim_objectives.objectives; index as obj_ind">
+                  <li class="list-group-item">{{ capitalize(objective) }}</li>
+                </ng-container>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div id="main_content" class="pl-5 text-justify row">
+          <ng-container *ngFor="let item of data.main_content; index as ind">
+            <div id="section_{{ ind }}">
+              <section>
+                <h5 class="pl-3">{{ capitalize( item['long_name'] ) }}</h5>
+                <div [innerHTML]="getDescriptions(ind)" class="px-5"></div>
+              </section>
+            </div>
+          </ng-container>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer w-100 h-25 container">
+          This is the footer
+        </div>
+
+      </div>
+
+    </mat-drawer-container>
+  </div>
+
+
+<!--  <app-footer></app-footer>-->
+</div>

@@ -68,7 +68,7 @@ export class HomeService {
         img_name: '3way_tensor',
         alt: 'tensor',
         description: '',
-        resource_link: 'tensors',
+        resource_link: '3mode-tensor-simuclustfactor',
       },
       {
         title: '',

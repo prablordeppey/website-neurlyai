@@ -1,0 +1,50 @@
+<header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">About</h4>
+          <p class="text-muted">
+            Traditional Machine Learning algorithms such as the most powerful Support Vector Machines tend to run very slow  on BigData. Neural Nets and Deep Learning not only limited to faster running times, they result in better predictions/classifications and  are well suited for all forms of BigData when they are carefully designed.
+            <br><br>
+            This channel seek to address NN and DL concepts and help you build your NN and DL models to solve Machine Learning problems of classification, regression and clustering.
+            Implementation on real-life data sets have been considered as well.
+            <br><br>
+            We hope you find the resources on this site useful. You can reach us on any of the contact methods provided and we will be ever available to attend to you.
+          </p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Contact</h4>
+          <ul class="list-unstyled">
+            <li><a class="text-white" [href]="redirect_links['youtube_channel']" target="_blank">Follow on Youtube</a></li>
+            <li><a class="text-white" href="#">Like on Instagram</a></li>
+            <li><a class="text-white" [href]="redirect_links['our_email']">Email Us</a></li>
+            <li><a class="text-white" href="https://github.com/prablordeppey" target="_blank">Visit Our GitHub Repository</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <svg class="mr-2" fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+          <circle cx="12" cy="13" r="4"></circle>
+        </svg>
+        <strong>{{title}}</strong>
+      </a>
+
+      <button class="btn btn-outline-primary float-left">
+        <fa-icon [icon]="faCoffee" class="mr-2"></fa-icon>
+        <span class="d-none d-md-inline" >Buy Us Coffee</span>
+      </button>
+
+      <button aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+              data-target="#navbarHeader" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>

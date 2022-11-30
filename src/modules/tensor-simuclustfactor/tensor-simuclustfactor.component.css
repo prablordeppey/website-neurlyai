@@ -1,0 +1,9 @@
+.sidenav_content {
+  height: 100vh;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+dfn {
+  font-style: italic;
+}
